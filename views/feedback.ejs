@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Feedback</title>
+  <style>
+    /* #updateCred {
+      display: none;
+    }
+
+    .box1 {
+      background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+      background-repeat: no-repeat;
+      background-size: 100% 145%;
+    }
+
+    .btn {
+      background-color: seagreen;
+    }
+
+    .wrap {
+      background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+      background-repeat: no-repeat;
+      background-size: 100% 145%;
+    }
+
+    .box1 {
+      background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+      background-repeat: no-repeat;
+      background-size: 100% 145%;
+    }
+
+    .card {
+      background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+      background-repeat: no-repeat;
+      background-size: 100% 145%;
+    } */
+
+    body {
+      background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+      background-repeat: no-repeat;
+      background-size: 100% 145%;
+    }
+
+    /* .btn {
+      background-color: seagreen;
+    } */
+
+    .form-group {
+      font-weight: bold;
+    }
+
+    .container {
+      margin-top: 5%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home/dashboard">Customer's Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <p class="nav-link">Welcome : <%= user.username %>
+          </p>
+        </li>
+        <li class="nav-item active"><a class="nav-link" href="/home/logout">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+
+  <div class="container">
+
+    <h1>Feedback Received Successfully</h1>
+
+  </div>
+
+  <div class="nav" style="height: 300px; width: 100%;">
+  </div>
+
+
+
+
+  <!-- <div class="container">
+    <div class="jumbotron" id="updateCred">
+
+      <form action="/agent/add//updateAgentCredentials" method="POST">
+        <div class="form-group row">
+          <div class="col-sm-6" style="float: left;">
+            <label for="staticEmail">New Username</label>
+
+            <input type="text" class="form-control" name="newusername" placeholder="username" style="float: left;">
+          </div>
+
+          <div class="col-sm-6">
+            <label for="inputPassword">New Password</label>
+
+            <input type="password" class="form-control" name="newpassword" placeholder="password" style="float: right;">
+          </div>
+        </div>
+
+        <div class="form-group row">
+
+          <div class="col-sm-9" style="float: left;">
+            <div class="row">
+              <p style="color: red; float:left">
+                <%= message.text %>
+              </p>
+            </div>
+            <div class="row">
+              <p style="color: green; float:left;">
+                <%= message.newuser %>
+              </p>
+            </div>
+            <div class="row">
+              <p style="color: green; float:left">
+                <%= message.newpass %>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-3" style="float: right;">
+            <div><button type="submit" class="btn btn-danger" style="float: right;">Update Credentials</button></div>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div> -->
+
+
+  <!-- <div class="box1">
+    <div class="wrap">
+      <div class="card">
+        <div class="card-body box2">
+          <strong>Properties</strong>
+          <div class="box3"><a href="/agent/view/property" class="btn btn-primary">Available Property</a></div>
+          <div class="box3"><a href="/agent/add/property" class="btn btn-primary">Add a Property</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="card">
+        <div class="card-body box2">
+          <strong>Know your customers</strong>
+          <div class="box3"><a href="/agent/view/seller" class="btn btn-primary">Sellers</a></div>
+          <div class="box3"><a href="/agent/view/buyer" class="btn btn-primary">Buyers</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="card">
+        <div class="card-body box2">
+          <strong>Make A Transaction</strong>
+          <div class="box3"><a href="/agent/add/payment" class="btn btn-primary">Payment</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="card">
+        <div class="card-body box2">
+          <strong>Sold/Rented</strong>
+          <div class="box3"><a href="/agent/prop_tran/sale" class="btn btn-primary">Properties Sold</a></div>
+          <div class="box3"><a href="/agent/prop_tran/rent" class="btn btn-primary">Properties Rented</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <!-- <script>
+    var bool = false;
+    function updateagent() {
+      var b = document.getElementById("updateCred");
+      if (bool) {
+        b.style.display = "none";
+        bool = !bool;
+      }
+      else {
+        b.style.display = "block";
+        bool = !bool;
+      }
+    }
+  </script> -->
+
+
+</body>
+
+</html>

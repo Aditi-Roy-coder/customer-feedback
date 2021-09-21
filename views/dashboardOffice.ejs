@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Office Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/office.css">
+    <style>
+        body {
+            background-image: url("https://images.pexels.com/photos/2501965/pexels-photo-2501965.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+            background-repeat: no-repeat;
+            background-size: 100% 145%;
+        }
+
+        .body {
+            background-color: transparent;
+        }
+
+        tr {
+            background-color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/home/dashboardOffice">Office Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <p class="nav-link">Welcome : <%= user.username %>
+                    </p>
+                </li>
+                <li class="nav-item active"><a class="nav-link" href="/home/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div id="cont_1">
+            <h1 style="font-size: 25px; font-weight: 500; text-align: center">Feedbacks</h1><br><br>
+            <table
+                style="width:80%; height: 200px;  margin :auto ;   border-spacing:0 15px;  box-shadow: 1px 1px 10px 1px; ">
+                <tr style="background-color: seagreen; color: white; height: 40px; opacity: 70%;">
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Feedback</th>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <% if(userData.length!=0) { var i=1; userData.forEach(function(data) { %>
+                        <td>
+                            <%=data.id %>
+                        </td>
+                        <td>
+                            <%=data.username %>
+                        </td>
+                        <td>
+                            <%=data.feedback %>
+                        </td>
+                </tr>
+
+                <% i++; }) %>
+                    <% } else{ %>
+                        <tr>
+                            <td colspan="4">No Data Found</td>
+                        </tr>
+                        <% } %>
+            </table>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
