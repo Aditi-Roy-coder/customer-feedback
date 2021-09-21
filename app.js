@@ -65,7 +65,7 @@ app.get('/home/dashboardOffice', userOffice.dashboard);//call for dashboard page
 app.get('/home/logoutOffice', userOffice.logout);//call for logout
 
 
-port = process.env.PORT || 80
+port = process.env.PORT || 5000
 
 app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
